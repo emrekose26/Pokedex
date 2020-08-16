@@ -34,6 +34,10 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {
@@ -75,6 +79,9 @@ dependencies {
     implementation(Dependencies.Moshi.moshi)
     implementation(Dependencies.Retrofit.moshiConverter)
     kapt(Dependencies.Moshi.moshiCodegen)
+
+    // Image Loading
+    implementation(Dependencies.Coil.coil)
 
     // Test
     testImplementation(Dependencies.Test.Junit.junit)

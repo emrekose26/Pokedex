@@ -95,6 +95,11 @@ object Dependencies {
         const val moshiCodegen = "com.squareup.moshi:moshi-kotlin-codegen:$version"
     }
 
+    object Coil {
+        private const val version = "0.11.0"
+        const val coil = "io.coil-kt:coil:$version"
+    }
+
     object Test {
         object Junit {
             private const val version = "4.12"

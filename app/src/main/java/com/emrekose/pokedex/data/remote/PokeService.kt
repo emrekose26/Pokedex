@@ -7,7 +7,7 @@ import retrofit2.http.Path
 
 interface PokeService {
 
-    @GET("pokemon")
+    @GET("pokemon?limit=100")
     suspend fun getPokemonList(): PokemonResponse
 
     @GET("pokemon/{name}")
