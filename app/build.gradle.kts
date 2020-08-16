@@ -4,6 +4,7 @@ plugins {
     kotlin("android.extensions")
     kotlin("kapt")
     id("dagger.hilt.android.plugin")
+    id("kotlin-android")
 }
 android {
     compileSdkVersion(29)
@@ -29,6 +30,10 @@ android {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
 }
 
 dependencies {
@@ -51,6 +56,8 @@ dependencies {
     implementation(Dependencies.AndroidX.RecyclerView.recyclerview)
     implementation(Dependencies.AndroidX.Navigation.fragment)
     implementation(Dependencies.AndroidX.Navigation.ui)
+    implementation(Dependencies.AndroidX.Hilt.viewModel)
+    kapt(Dependencies.AndroidX.Hilt.compiler)
 
     // Material
     implementation(Dependencies.Material.material)
