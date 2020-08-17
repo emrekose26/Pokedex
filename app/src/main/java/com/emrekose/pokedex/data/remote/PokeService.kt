@@ -1,5 +1,6 @@
 package com.emrekose.pokedex.data.remote
 
+import com.emrekose.pokedex.model.detail.PokemonDetailResponse
 import com.emrekose.pokedex.model.main.Pokemon
 import com.emrekose.pokedex.model.main.PokemonResponse
 import retrofit2.http.GET
@@ -11,5 +12,5 @@ interface PokeService {
     suspend fun getPokemonList(): PokemonResponse
 
     @GET("pokemon/{name}")
-    suspend fun getSinglePokemon(@Path("name") name: String): Pokemon
+    suspend fun getSinglePokemon(@Path("name") name: String): PokemonDetailResponse
 }

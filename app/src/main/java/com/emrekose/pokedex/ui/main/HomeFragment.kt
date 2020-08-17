@@ -8,10 +8,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
-import com.emrekose.pokedex.R
 import com.emrekose.pokedex.databinding.FragmentHomeBinding
 import com.emrekose.pokedex.utils.Result
-import com.emrekose.pokedex.ui.MainViewModel
 import com.emrekose.pokedex.utils.extensions.gone
 import com.emrekose.pokedex.utils.extensions.toast
 import com.emrekose.pokedex.utils.extensions.visible
