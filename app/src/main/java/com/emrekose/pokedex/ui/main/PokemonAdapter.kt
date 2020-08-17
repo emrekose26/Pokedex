@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import coil.api.load
 import com.emrekose.pokedex.databinding.ItemPokemonBinding
-import com.emrekose.pokedex.model.Pokemon
+import com.emrekose.pokedex.model.main.Pokemon
 
 class PokemonAdapter: ListAdapter<Pokemon, PokemonAdapter.ViewHolder>(PokemonDiffCallback()) {
 

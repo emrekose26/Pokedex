@@ -1,7 +1,7 @@
 package com.emrekose.pokedex.data.remote
 
-import com.emrekose.pokedex.model.Pokemon
-import com.emrekose.pokedex.model.PokemonResponse
+import com.emrekose.pokedex.model.main.Pokemon
+import com.emrekose.pokedex.model.main.PokemonResponse
 import retrofit2.http.GET
 import retrofit2.http.Path
 

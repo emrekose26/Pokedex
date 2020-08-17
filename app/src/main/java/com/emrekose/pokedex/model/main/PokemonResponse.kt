@@ -1,4 +1,4 @@
-package com.emrekose.pokedex.model
+package com.emrekose.pokedex.model.main
 
 
 import com.squareup.moshi.Json

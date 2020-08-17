@@ -1,7 +1,7 @@
 package com.emrekose.pokedex.repository
 
 import com.emrekose.pokedex.data.remote.PokeService
-import com.emrekose.pokedex.model.PokemonResponse
+import com.emrekose.pokedex.model.main.PokemonResponse
 
 import com.emrekose.pokedex.utils.Result
 import kotlinx.coroutines.flow.Flow

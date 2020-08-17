@@ -3,8 +3,7 @@ package com.emrekose.pokedex.ui
 import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.emrekose.pokedex.model.Pokemon
-import com.emrekose.pokedex.model.PokemonResponse
+import com.emrekose.pokedex.model.main.PokemonResponse
 import com.emrekose.pokedex.repository.MainRepository
 import com.emrekose.pokedex.utils.Result
 import kotlinx.coroutines.ExperimentalCoroutinesApi
