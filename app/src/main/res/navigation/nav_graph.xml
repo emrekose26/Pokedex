@@ -18,5 +18,9 @@
         android:id="@+id/detailFragment"
         android:name="com.emrekose.pokedex.ui.detail.DetailFragment"
         android:label="fragment_detail"
-        tools:layout="@layout/fragment_detail" />
+        tools:layout="@layout/fragment_detail" >
+        <argument
+            android:name="pokemon"
+            app:argType="com.emrekose.pokedex.model.main.Pokemon" />
+    </fragment>
 </navigation>

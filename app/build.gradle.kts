@@ -4,7 +4,7 @@ plugins {
     kotlin("android.extensions")
     kotlin("kapt")
     id("dagger.hilt.android.plugin")
-    id("kotlin-android")
+    id("androidx.navigation.safeargs.kotlin")
 }
 android {
     compileSdkVersion(29)

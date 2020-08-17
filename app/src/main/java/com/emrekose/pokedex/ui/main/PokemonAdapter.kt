@@ -3,12 +3,15 @@ package com.emrekose.pokedex.ui.main
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.navigation.NavOptions
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import coil.api.load
 import com.emrekose.pokedex.databinding.ItemPokemonBinding
 import com.emrekose.pokedex.model.main.Pokemon
+import com.emrekose.pokedex.ui.detail.DetailFragmentArgs
 
 class PokemonAdapter: ListAdapter<Pokemon, PokemonAdapter.ViewHolder>(PokemonDiffCallback()) {
 
@@ -29,9 +32,9 @@ class PokemonAdapter: ListAdapter<Pokemon, PokemonAdapter.ViewHolder>(PokemonDif
             binding.itemPokemonImg.load(pokemon.getPokemonImageUrl())
             binding.itemPokemonName.text = pokemon.name
 
-            binding.root.setOnClickListener {
-                // TODO onClick implementation
-                Log.d("ADAPTER", pokemon.name)
+            binding.root.setOnClickListener {view ->
+                val action = HomeFragmentDirections.actionHomeFragmentToDetailFragment(pokemon)
+                view.findNavController().navigate(action)
             }
         }
     }
