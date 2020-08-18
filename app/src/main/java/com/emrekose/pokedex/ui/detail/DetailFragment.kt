@@ -9,11 +9,14 @@ import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.navArgs
+import coil.api.load
 import com.emrekose.pokedex.R
 import com.emrekose.pokedex.databinding.FragmentDetailBinding
 import com.emrekose.pokedex.databinding.FragmentHomeBinding
 import com.emrekose.pokedex.utils.Result
+import com.emrekose.pokedex.utils.extensions.gone
 import com.emrekose.pokedex.utils.extensions.toast
+import com.emrekose.pokedex.utils.extensions.visible
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_detail.*
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -43,10 +46,13 @@ class DetailFragment : Fragment() {
             viewModel.pokemon.collect { result ->
                 when(result) {
                     is Result.Loading -> {
-
+                        binding?.detailProgressBar?.visible()
                     }
                     is Result.Success -> {
-
+                        binding?.detailProgressBar?.gone()
+                        binding?.detailHeight?.text = "${result.data.height.toDouble() / 10} M"
+                        binding?.detailWeight?.text = "${result.data.weight.toDouble() / 10} KG"
+                        binding?.imageView?.load(args.pokemon.getPokemonImageUrl())
                     }
                     is Result.Error -> {
                         activity?.toast("Something went wrong. Please try again later")
