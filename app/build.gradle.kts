@@ -7,17 +7,17 @@ plugins {
     id("androidx.navigation.safeargs.kotlin")
 }
 android {
-    compileSdkVersion(29)
-    buildToolsVersion = "29.0.3"
+    compileSdkVersion(Configs.compileSdkVersion)
+    buildToolsVersion = Configs.buildToolVersion
 
     defaultConfig {
-        applicationId = "com.emrekose.pokedex"
-        minSdkVersion(19)
-        targetSdkVersion(29)
-        versionCode = 1
-        versionName = "1.0"
+        applicationId = Configs.applicationId
+        minSdkVersion(Configs.minSdkVersion)
+        targetSdkVersion(Configs.targetSdkVersion)
+        versionCode = Configs.versionCode
+        versionName = Configs.versionName
 
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner = Configs.testInstrumentationRunner
     }
 
     buildTypes {
